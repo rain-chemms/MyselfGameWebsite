@@ -33,6 +33,8 @@ function addTrailSegment(x, y) {
     
     segment.style.rotate = Math.floor(Math.random() * 2 * Math.PI)
     segment.style.scale = Math.random() * 1.75 + 0.25;
+    segment.style.animation.
+
 
     trailSegments.push(segment);
     // 自动清理旧线段
