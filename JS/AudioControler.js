@@ -5,17 +5,16 @@ const timeDisplay = document.getElementById('audio-time-display');
 const nextBtn = document.getElementById('audio-next-btn');
 const prevBtn = document.getElementById('audio-previous-btn');
 const musicNameLabel = document.getElementById('music-name-label');
+let currentSongIndex = 1;  // 当前播放歌曲的索引
 
 
+audio.loop = true; // 设置循环播放
 // 播放列表（包含歌曲标题和路径）
 const playlist = [
   { title: "诀别书", src: "./Source/Audio/诀别书.mp3" },
   { title: "狼与香辛料OP1", src: "./Source/Audio/Spice&WolfOP1.mp3" },
   { title: "歌曲3", src: "./Source/Audio/诀别书.mp3" }
 ];
-
-let currentSongIndex = 0;  // 当前播放歌曲的索引
-
 // 加载并播放指定索引的歌曲
 function loadAndPlay(index) {
   const song = playlist[index];
