@@ -13,6 +13,11 @@ body {
     cursor: none;
 }
 
+#logo-text-creater{
+    text-align: center;
+    color:rgb(182, 107, 252);
+}
+
 video {
     width:100%;
 }
