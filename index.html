@@ -90,9 +90,20 @@
 
                     <div class="content-section">
                         <h2 class="section-title">概览</h2>
-                        <div class="long-content">
-
-
+                        <div class="dashboard-stats">
+                            <div class="stat-card">
+                                <div class="stat-label">游戏项目列表:</div>
+                                <div class="long-content" style="color: #a36aff;">  
+                                    Chess3D [BY] 于乐先生
+                                </div>
+                            
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">程序项目列表:</div>
+                                <div class="long-content">  
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -114,11 +125,12 @@
                             这个页面是关于游戏的,这个目录下的有些游戏可以通过网址链接访问下载,如果你对游戏做了网页端的适配,我很支持你把网页端的游戏demo使用链接放上来,毕竟直接能玩去体验一下也不错
                         </p>
                     </div>
+                    <hr>
                     <div class="chart-container">
                         <h1 class="stat-label">
                             Chess3D
                         </h1>
-                        
+
                         <div class="long-content">
                             <p class="stat-label">
                                 演示视频:
@@ -141,12 +153,14 @@
                             <h1 class="stat-label">
                                 游戏信息/源码/下载:
                             </h1>
-                            <p class="stat-label">项目源代码:</p><a href="https://github.com/rain-chemms/Chess3D" target="_blank">https://github.com/rain-chemms/Chess3D</a>
+                            <p class="stat-label">项目源代码:</p><a href="https://github.com/rain-chemms/Chess3D"
+                                target="_blank">https://github.com/rain-chemms/Chess3D</a>
                             <p class="stat-label">游戏下载:</p>
-                            <p class="stat-label">Android:</p><a href="" target="_blank"></a>
-                            <p class="stat-label">Windows:</p><a href="" target="_blank"></a>
-                            <p class="stat-label">WebGL:</p><a href="https://github.com/rain-chemms/Chess3D-Web" target="_blank">https://github.com/rain-chemms/Chess3D-Web</a>
-                            <p class="stat-label">你说你想要现在就玩?那就点下面开始吧!</p><a href="https://rain-chemms.github.io/Chess3D-Web/" target="_blank">在线实时游玩该项目(WebGL项目)</a>
+                            <p class="stat-label">Android/Windows/WebGL:</p><a
+                                href="https://github.com/rain-chemms/Chess3D/releases/tag/Release-v1.0"
+                                target="_blank">https://github.com/rain-chemms/Chess3D/releases/tag/Release-v1.0</a>
+                            <p class="stat-label">你说你想要现在就玩?那就点下面开始吧!</p><a
+                                href="https://rain-chemms.github.io/Chess3D-Web/" target="_blank">在线实时游玩该项目(WebGL项目)</a>
                         </div>
                     </div>
                 </div>
@@ -158,6 +172,7 @@
                         <p class="stat-label">这个页面是关于一些开源项目的,主要给出它们在GitHub的链接和一些简介,简介能帮助你了解项目,估计随着网页发展,这些项目大概率也是和游戏有关的
                         </p>
                     </div>
+                    <hr>
                 </div>
 
                 <!-- 系统设置页面 -->
@@ -174,20 +189,20 @@
                         <h1 class="stat-label">音乐播放器</h1>
                         <p class="stat-label" id="music-name-label">正在播放:</p>
                         <div class="custom-audio-player">
-                            
+
                             <audio id="back-audio" src="./Source/Audio/诀别书.mp3"></audio>
                             <input type="range" id="audio-progress-bar" min="0" max="100" value="0">
                             <span id="audio-time-display">0:00 / 0:00</span>
-                            
+
                             <div id="next-prev-buttons-layout">
-                                <button class ="cta-button" id="audio-pause-btn">播放</button>
-                                <button class ="cta-button" id="audio-next-btn">下一首</button>
-                                <button class ="cta-button" id="audio-previous-btn">上一首</button>                            
+                                <button class="cta-button" id="audio-pause-btn">播放</button>
+                                <button class="cta-button" id="audio-next-btn">下一首</button>
+                                <button class="cta-button" id="audio-previous-btn">上一首</button>
                             </div>
                         </div>
                     </div>
 
-                    
+
                     <button class="cta-button" onclick="addRandomStar()">添加随机星星</button>
                 </div>
 
@@ -199,7 +214,8 @@
                         <div class="long-content">
                             <p class="stat-label">作者昵称: 于乐先生(John Rain / Sleeply Cat)</p>
                             <p class="stat-label">邮箱: 2440623951@qq.com</p>
-                            <p class="stat-label">GitHub: <a href="https://github.com/rain-chemms" target="_blank">https://github.com/rain-chemms</a></p>
+                            <p class="stat-label">GitHub: <a href="https://github.com/rain-chemms"
+                                    target="_blank">https://github.com/rain-chemms</a></p>
                             <hr>
                             <h1 id="logo-text-creater">LOGO</h1>
                             <img src="./Source/Images/Logo.jpeg" alt="作者头像" width="100%">
