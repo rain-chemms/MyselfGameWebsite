@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/Styles.css">
     <link rel="stylesheet" href="CSS/AudioPlayer.css">
     <link rel="stylesheet" href="CSS/MouseTrail.css">
+    <link rel="stylesheet" href="CSS/SearchBar.css">
 </head>
 
 <body>
@@ -25,6 +26,14 @@
                 <div class="logo">GP</div>
                 <div class="logo-text">G&P By Self</div>
             </div>
+
+            <!-- 搜索窗口 -->
+            <div style="color:rgb(152, 48, 249);width:100%;display:flex;justify-content: center;">搜点啥?</div>
+            <div id="serach-container">
+                <input type="text" id="search-bar" placeholder="搜索当前页(不区分大小写)">
+                <button id="search-btn" onclick="">搜索</button>
+            </div>
+
             <!-- 导航菜单 -->
             <div class="nav-links">
                 <a href="#" class="nav-item active" data-target="introduction">
@@ -127,10 +136,7 @@
                     </div>
                     <hr>
                     <div class="chart-container">
-                        <h1 class="stat-label">
-                            Chess3D
-                        </h1>
-
+                        <div class="breadcrumb" id="CHESS3D">Chess3D</div>
                         <div class="long-content">
                             <p class="stat-label">
                                 演示视频:
@@ -235,6 +241,7 @@
     <script src="./JS/MouseTrail.js"></script>
     <script src="./JS/Controler.js"></script>
     <script src="./JS/AudioControler.js"></script>
+    <script src="./JS/SearchBar.js"></script>
 </body>
 
 </html>
