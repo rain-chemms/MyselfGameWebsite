@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="CSS/AudioPlayer.css">
     <link rel="stylesheet" href="CSS/MouseTrail.css">
     <link rel="stylesheet" href="CSS/SearchBar.css">
+    <link rel="stylesheet" href="CSS/3DEarthContainer.css">
 </head>
 
-<body>
+<body onload="draw()">
     <!-- 自定义光标 -->
     <div class="custom-cursor" id="customCursor"></div>
     <!-- 点击特效容器 -->
@@ -234,14 +235,33 @@
                             <p>作者信息:于乐先生(John Rain)</p>
                         </div>
                     </div>
+                    <div id="3D-earth-container" onload="draw()">
+                        <div id="container">
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
-    <script src="./JS/MouseTrail.js"></script>
-    <script src="./JS/Controler.js"></script>
-    <script src="./JS/AudioControler.js"></script>
-    <script src="./JS/SearchBar.js"></script>
-</body>
+        <script src="./JS/MouseTrail.js"></script>
+        <script src="./JS/Controler.js"></script>
+        <script src="./JS/AudioControler.js"></script>
+        <script src="./JS/SearchBar.js"></script>
+    </body>
 
+    <!--3D模型加载-->
+    <script src="libs/three.js"></script>
+    <script src="libs/OrbitControls.js"></script>
+    <script src="libs/WebViewModel.js"></script>
+    <script type="text/javascript">
+        var model_url;
+        if (!window.localStorage) {
+        // alert('no support localStorage');
+        } else {
+            model_url = 'models/gltf/earth/earth.gltf';
+            var storage = window.localStorage;
+            storage["url"] = model_url;
+        }
+    </script>
 </html>

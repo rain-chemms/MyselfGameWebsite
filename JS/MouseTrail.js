@@ -8,7 +8,7 @@ let lastTrailTime = 0;
 // 创建延迟，单位为毫秒
 let creatDelay = 1;
 // 最大拖尾线段数
-let maxTrailSegmentsNumber = 20;
+let maxTrailSegmentsNumber = 50;
 // 鼠标移动事件处理函数
 function handleMouseMove(e) {
     customCursor.style.left = e.clientX + 'px';
@@ -35,7 +35,7 @@ function addTrailSegment(x, y) {
     segment.style.scale = Math.random() * 1.75 + 0.25;
     segment.style.animation.
 
-
+    trailSegments = trailSegments ?? [];
     trailSegments.push(segment);
     // 自动清理旧线段
     if (trailSegments.length > maxTrailSegmentsNumber ) {
