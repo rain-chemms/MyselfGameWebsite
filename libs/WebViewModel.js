@@ -8,7 +8,6 @@ var model_center;       // 模型中心
 var cameraResetPosition = 0;
 var cameraResetPositionY = 0;
 var modelIndexUrl='';
-
 function initRender() {                 //渲染方式
     renderer = new THREE.WebGLRenderer({
         alpha: true,
@@ -18,7 +17,8 @@ function initRender() {                 //渲染方式
     renderer.shadowMap.enabled = true;
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    renderer.setClearColor(0xd7d7d7);
+    renderer.setClearColor(0x1a1f4d);
+    renderer.setPixelRatio(window.devicePixelRatio);
     document.getElementById("container").appendChild(renderer.domElement);
 
 }
@@ -117,6 +117,9 @@ function disposeScene() {
     scene.remove(scene.children[scene.children.length - 1]);
     console.log(scene);
 }
+
+var models = [];
+var modelShow;
 
 function initLoader() {
     // ========   fbx loader
@@ -429,3 +432,41 @@ function loadJs(url,callback){
     document.body.appendChild(script);
 }
 
+
+
+//个人添加的函数:处理多个模型加载,适用于gltf
+// 存储所有加载的模型
+/*
+var models = [];
+function loadModels() {
+    // 从localStorage获取模型URL数组
+    var storedUrls = localStorage.getItem('model_urls');
+    if (storedUrls) {
+        model_urls = JSON.parse(storedUrls);
+    }
+
+    // 创建加载器
+    var loader = new THREE.GLTFLoader();
+    
+    // 加载所有模型
+    model_urls.forEach((url, index) => {
+        loader.load(url, (gltf) => {
+            // 设置模型位置
+            gltf.scene.position.set(
+                (index % 2 === 0) ? -5 : 5, 
+                Math.floor(index / 2) * 3, 
+                0
+            );
+            
+            // 添加到场景
+            scene.add(gltf.scene);
+            models.push(gltf.scene);
+            
+            // 如果所有模型加载完成
+            if (models.length === model_urls.length) {
+                startAnimation();
+            }
+        });
+    });
+}
+*/
