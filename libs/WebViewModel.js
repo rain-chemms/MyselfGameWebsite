@@ -20,8 +20,9 @@ function initRender() {                 //渲染方式
     renderer.setClearColor(0x1a1f4d);
     renderer.setPixelRatio(window.devicePixelRatio);
     document.getElementById("container").appendChild(renderer.domElement);
-
 }
+
+
 
 function getModelUrl() {
     var storage = window.localStorage;
@@ -470,3 +471,17 @@ function loadModels() {
     });
 }
 */
+
+// 初始化粒子系统
+const particleSystem = createParticleSystem();
+
+// 主渲染循环
+function animate() {
+    requestAnimationFrame(animate);
+
+    // 更新粒子位置
+    updateParticles();
+
+    // 渲染场景
+    renderer.render(scene, camera);
+}

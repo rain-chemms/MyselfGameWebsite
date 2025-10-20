@@ -13,7 +13,14 @@ audio.loop = true; // 设置循环播放
 const playlist = [
   { title: "诀别书", src: "./Source/Audio/诀别书.mp3" },
   { title: "狼与香辛料OP1", src: "./Source/Audio/Spice&WolfOP1.mp3" },
-  { title: "歌曲3", src: "./Source/Audio/诀别书.mp3" }
+  { title: "怪物-动物狂想曲-Season2-OP", src: "./Source/Audio/动物狂想曲Se2OP.mp3" },
+  { title: "歌曲4", src: "./Source/Audio/诀别书.mp3" },
+  { title: "歌曲5", src: "./Source/Audio/诀别书.mp3" },
+  { title: "歌曲6", src: "./Source/Audio/诀别书.mp3" },
+  { title: "歌曲7", src: "./Source/Audio/诀别书.mp3" },
+  { title: "歌曲8", src: "./Source/Audio/诀别书.mp3" },
+  { title: "歌曲9", src: "./Source/Audio/诀别书.mp3" },
+  { title: "歌曲10", src: "./Source/Audio/诀别书.mp3" }
 ];
 // 加载并播放指定索引的歌曲
 function loadAndPlay(index) {
